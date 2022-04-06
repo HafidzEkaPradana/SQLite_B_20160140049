@@ -39,7 +39,7 @@ public class TemanBaru extends AppCompatActivity {
                     nm = tNama.getText().toString();
                     tlp = tTelpon.getText().toString();
 
-                    HashMap<String,String>qvalue = new HashMap<>();
+                    HashMap<String,String> qvalue = new HashMap<>();
                     qvalue.put("nama",nm);
                     qvalue.put("telpon",tlp);
 
