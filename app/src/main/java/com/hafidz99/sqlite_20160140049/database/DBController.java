@@ -6,17 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
-import com.hafidz99.sqlite_20160140049.MainActivity;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DBController extends SQLiteOpenHelper {
 
-
-    public DBController(MainActivity context) {
+    public DBController(Context context) {
         super(context, "ProdiTI", null, 1);
     }
 

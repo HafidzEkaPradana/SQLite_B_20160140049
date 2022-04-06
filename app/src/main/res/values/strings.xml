@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SQLite_20160140049</string>
+    <string name="inputNama">Nama</string>
+    <string name="inputTelpon">Telpon</string>
 </resources>
