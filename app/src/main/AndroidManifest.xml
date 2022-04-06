@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SQLite_20160140049">
         <activity
+            android:name=".TemanBaru"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
