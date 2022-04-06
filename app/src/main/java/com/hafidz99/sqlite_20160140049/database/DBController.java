@@ -2,11 +2,13 @@ package com.hafidz99.sqlite_20160140049.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DBController extends SQLiteOpenHelper {
@@ -34,5 +36,29 @@ public class DBController extends SQLiteOpenHelper {
         basisdata.insert("nama", null,nilai);
         basisdata.close();
     }
+
+    public ArrayList<HashMap<String ,String>> getAllTeman(){
+        ArrayList<HashMap<String ,String>> daftarTeman;
+        daftarTeman = new ArrayList<HashMap<String,String>>();
+
+        String selectSql = "select * from teman";
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectSql, null);
+        if(cursor.moveToFirst()){
+            do{
+                HashMap<String,String> map = new HashMap<>();
+                map.put("id",cursor.getString(0));
+                map.put("nama",cursor.getString(1));
+                map.put("telpon",cursor.getString(2));
+
+                daftarTeman.add(map);
+            }while (cursor.moveToNext());
+        }
+
+        db.close();
+        return daftarTeman;
+    }
+
+
 
 }
