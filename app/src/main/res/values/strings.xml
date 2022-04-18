@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">SQLite_20160140049</string>
+    <string name="app_name">Activity 7</string>
     <string name="inputNama">Nama</string>
     <string name="inputTelpon">Telpon</string>
+    <string name="tdelete">Delete Data</string>
+    <string name="tSimpan">Save</string>
+    <string name="tCancle">Cancel</string>
+    <string name="tedit">Edit Data</string>
+    <string name="tnama">Nama</string>
+    <string name="tnotelp">No Telpon</string>
+    <string name="tcreatedata">Create Data</string>
+    <string name="tView">View</string>
 </resources>

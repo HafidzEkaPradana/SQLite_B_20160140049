@@ -43,6 +43,9 @@ public class TemanBaru extends AppCompatActivity {
                     qvalue.put("nama",nm);
                     qvalue.put("telpon",tlp);
 
+                    Toast.makeText(getApplicationContext(),"Kontak Tersimpan", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(TemanBaru.this, MainActivity.class));
+                    finish();
                     controller.insertData(qvalue);
                     callHome();
                 }
