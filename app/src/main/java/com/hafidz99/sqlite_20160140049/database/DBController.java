@@ -67,7 +67,7 @@ public class DBController extends SQLiteOpenHelper {
 
     public void DeleteData(HashMap<String, String> queryValues){
         SQLiteDatabase db = getWritableDatabase();
-        db.delete("teman", "id?", new String[]{queryValues.get("id")});
+        db.delete("teman", "id=?", new String[]{queryValues.get("id")});
         db.close();
     }
 

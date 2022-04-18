@@ -71,7 +71,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                                 control.startActivity(i);
                                 break;
                             case R.id.mnDelete:
-                                HashMap<String, String> values = new HashMap<>();
+                                HashMap<String,String> values = new HashMap<>();
                                 values.put("id",id);
                                 db.DeleteData(values);
                                 Intent j = new Intent(control, MainActivity.class);
@@ -82,7 +82,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                     }
                 });
                 popupMenu.show();
-                return true;
+                return false;
             }
         });
     }
