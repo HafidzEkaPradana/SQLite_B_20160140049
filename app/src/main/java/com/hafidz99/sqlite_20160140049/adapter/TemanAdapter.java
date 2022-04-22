@@ -29,6 +29,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
     public Context control;
 
     public TemanAdapter(ArrayList<Teman>listdata){
+
         this.listdata = listdata;
     }
 
