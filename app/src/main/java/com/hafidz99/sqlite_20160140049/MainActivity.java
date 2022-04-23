@@ -37,13 +37,10 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fab;
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static String url_select = "http://10.0.2.2/umyTI/bacateman.php";
+    private static String url_select = "http://10.0.2.2:8080/umyTI/bacateman.php";
     private static final String TAG_ID = "id";
     private static final String TAG_NAMA = "nama";
     private static final String TAG_TELPON = "telpon";
-
-    DBController controller = new DBController(this);
-    String id,nm,tlp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TemanBaru.class);
+                Intent intent = new Intent(MainActivity.this, TambahTeman.class);
                 startActivity(intent);
             }
         });
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: "+error.getMessage());
                 error.printStackTrace();
-                Toast.makeText(MainActivity.this,"gagal",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Gagal Terhubung ke Database",Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jArr);
